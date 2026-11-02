@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Selector Detective · The Party in Motion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="sky"><div class="moon"></div></div>
+
+  <header class="top">
+    <div class="logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/><path d="M8 10.5h5M10.5 8v5" opacity=".6"/></svg>
+    </div>
+    <div>
+      <h1>Selector Detective</h1>
+      <p>The cake vanished at 21:30. Find the thief with jQuery, then play with the party.</p>
+    </div>
+    <span class="tag">Assignment 6 · jQuery</span>
+  </header>
+
+  <main class="stage">
+    <section class="panel" aria-label="Case files">
+      <div class="panel-head">
+        <h2>Case files</h2>
+        <span class="hint">20 cases · found guests stay bright · click a guest · Move · Sort by time</span>
+        <div class="panel-tools"><button type="button" id="clear-btn" class="clear-btn">Clear</button></div>
+      </div>
+      <div id="case-list" class="case-list"></div>
+    </section>
+
+    <section class="house-wrap" aria-label="The house">
+      <div class="house">
+        <div class="roof">
+          <div class="chimney"></div>
+          <div class="roof-shape"></div>
+          <div class="roof-window"></div>
+          <div class="banner">The Party, 19:30 – 22:30</div>
+        </div>
+        <div class="eave"></div>
+        <div id="floors" class="house-body"></div>
+        <div class="ground">
+          <div class="legend" id="legend"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside id="evidence" class="evidence" aria-live="polite">
+    <div class="ev-q">
+      <span class="ev-no">—</span>
+      <p class="ev-title">Pick a case file, click a guest, try Move and Sort by time</p>
+    </div>
+    <div class="ev-found">
+      <div class="ev-count">0</div>
+      <div class="ev-chips"></div>
+    </div>
+    <pre class="ev-code">// the jQuery chain of the case appears here</pre>
+  </aside>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/effects.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
